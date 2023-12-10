@@ -1,0 +1,5 @@
+to
+db.sqlite3
+env
+media/posts/*
+media/profilePics/*

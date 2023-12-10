@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png">
+    <title>Settings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/uikit.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+
+</head>
+
+<body>
+
+
+       
+
+          
+
+            <div class="container m-auto"> 
+
+                <h1 class="text-2xl leading-none text-gray-900 tracking-tight mt-3"> Account Setting </h1>
+<hr style="margin-top:10px">
+
+<form action="" method="post" enctype="multipart/form-data">
+                <div class="grid lg:grid-cols-3 mt-12 gap-8">
+                    <div>
+                        <h3 class="text-xl mb-2"> Basic</h3>
+                        <p></p>
+                    </div>
+                        {% csrf_token %}
+                        <div class="bg-white rounded-md lg:shadow-lg shadow col-span-2">
+                            <div>
+                                
+                                <div class="grid lg:p-6 pt-4">
+                                    
+                                
+                                <div>
+                                    <label for=""> Profile Picture</label>
+                                    <img src={{profile.profile_img.url}} style="margin-bottom:10px">
+                                    <input type="file" class="shadow-none bg-gray-100" name="profileImg" default:"">
+                            </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 lg:p-6 p-4">
+                               <div class="col-span-2">
+                                   <label for=""> Email</label>
+                                   <input type="text" placeholder="Your name.." class="shadow-none bg-gray-100" value="{{profile.user.email}}" readonly> 
+                               </div>
+                               <div>
+                                   <label for=""> First name</label>
+                                   <input type="text" name="first_name" placeholder="Your name.." class="shadow-none bg-gray-100" value="{{profile.user.first_name}}">
+                               </div>
+                               <div>
+                                   <label for=""> Last name</label>
+                                   <input type="text" name="last_name" placeholder="Your name.." class="shadow-none bg-gray-100" value="{{profile.user.last_name}}">
+                                </div>
+                                <div class="col-span-2">
+                                    <label for="about">Bio</label>
+                                    <textarea id="about" name="bio" rows="3"  class="shadow-none bg-gray-100" style="padding:10px">{{profile.bio}}</textarea>
+                                </div>
+                                <div class="col-span-2">
+                                    <label for=""> Location</label>
+                                    <input type="text" name="location" placeholder="" class="shadow-none bg-gray-100" value="{{profile.location}}">
+                                </div>
+                        
+                           </div>
+                    
+    
+                       <div class="bg-gray-10 p-6 pt-0 flex justify-end space-x-3">
+                           <a href="{% url "index" %}" class="p-2 px-4 rounded bg-gray-50 text-red-500"> Cancel </a>
+                           <button type="submit" class="button bg-blue-700"> Save </button>
+                       </div>
+                    </form>
+                    </div>
+
+                    
+    
+                    </div>
+                    <br>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+
+    
+
+ <!-- Scripts
+    ================================================== -->
+    <script src="{% static 'assets/js/tippy.all.min.js' %}"></script>  
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/uikit.js' %}"></script>
+    <script src="{% static 'assets/js/simplebar.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+
+    <script src="{% static '../../unpkg.com/ionicons%405.2.3/dist/ionicons.js' %}"></script>
+
+
+
+</body>
+
+</html>

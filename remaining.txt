@@ -1,0 +1,18 @@
+like************************
+follow and following button interchannge | follow and followback button hide of current user*****************
+list all the post of followers only ******************
+sidebar recommendation system of followers
+search people functionality
+
+profile image change in settings**************************
+
+
+
+
+
+
+user can't follow or unfollow himself in views(already button is hidden in templates)
+all posts on homepage in sequence of time
+delete posts
+edit posts
+list and show followers and following
